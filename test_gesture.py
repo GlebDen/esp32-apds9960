@@ -6,7 +6,7 @@ from device import uAPDS9960 as APDS9960
 
 sda_pin = machine.Pin(21)
 scl_pin = machine.Pin(22)
-rst_pin = Pin(19, Pin.OUT)
+rst_pin = machine.Pin(19) #not sure it used
 
 bus = machine.I2C(sda=sda_pin, scl=scl_pin)
 apds = APDS9960(bus)
